@@ -1,1 +1,5 @@
-# Clase3FrancescCorcoll
+# Clase2FrancescCorcoll
+
+
+
+Francesc Corcoll Ricart, clase 3  Ciclos.
