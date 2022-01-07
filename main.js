@@ -1,29 +1,28 @@
 
-//Pedimos por entrada de teclado el dato
+// Este programa simula un loggin, dentro del bucle te dice
+// los intentos disponibles y solo te muestra el ok si no se trata del
+// usuario reservado o de un espacio nulo.
 
-let entrada = prompt ("Ingrese un numero menor que 10");
+const reservado = "stop"
 
-//Parseamos el dato para asegurarnos  que se trata de un dato numérico
-let salida = Number(entrada);
-//creo una constante para reservar el valor de un dato y denegar el acceso si se trata de ese.
-const reservado = "gutierrez"
 
-if (salida < 10) {
-    //este console log lo uso para ver que entra bien en el condicional, no es para el usuario.
-    console.log ('El numero es inferior a 10')
-    let nombre = prompt ("Ingresa tu nombre de usuario:")
-    let apellido = prompt ("Ingresa tu apellido:")
+for (let i =1 ; i < 10 ; i++ ){
 
-    if (((nombre != "") && (apellido != "")) && (apellido != reservado) ) {
-        alert ("Saludos "+ nombre + " " + apellido)
-   
-    }
-    else  {
-        alert ("No puedes acceder con el usurario reservado.")
-    }
-    }
+        let nombre = prompt("Ingrese tu nombre: ")
+        let apellido = prompt("Ingresa tu apellido:")
 
-else {
-    alert('Acceso denegado.')
-}
-//mostramos en un alert box el resultado con un string adicional.
+        if (((nombre != "") && (apellido != "")) && (apellido != reservado)  && (nombre != reservado)) {
+            alert ("Saludos "+ nombre + " " + apellido + " " + "dispones de" + " " + (10 - i) + " " + "intentos")
+       
+        }
+        else  {
+            alert ("No puedes acceder con el usurario reservado o sin credenciales.")
+        }
+        }
+
+    
+
+
+
+
+
